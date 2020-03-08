@@ -1,4 +1,4 @@
-`MacOS`, `Anaconda 3`, `Jupyter Nootbook`, `python 2.7`, `hadoop 3.1.2`, `scala 2.12.8`, `apache-spark 2.4.1` 
+`MacOS`, `Anaconda 3`, `Jupyter Notebook`, `Python 2.7`, `Hadoop 3.1.2`, `Scala 2.12.8`, `Apache-Spark 2.4.1` 
 
 - 1. Install spark, scala hadoop
       ```
