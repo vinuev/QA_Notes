@@ -47,6 +47,7 @@
     `source ~/.zshrc`
 
 - 3. Build the anoconda virtual environment `python 2.7`
+
      Reference: [Create virtual environments for python with conda](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/)
      
      Activate the environment by type `source activate [your conda virtual environment name]`
