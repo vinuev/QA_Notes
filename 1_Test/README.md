@@ -2,10 +2,13 @@
 
 - 1. Install spark, scala hadoop
       ```
-      brew install apache-spark
-      brew install scala
-      brew install hadoop
+      brew install apache-spark@2.4.1
+      brew install scala@2.12.8
+      brew install hadoop@3.1.2
       ```
+      Reference: [Homebrew install specific version of formula?
+](https://stackoverflow.com/questions/3987683/homebrew-install-specific-version-of-formula)
+      
 - 2. enviroment variables
 
   - 1. Open `.zshrc`
@@ -44,7 +47,7 @@
     `source ~/.zshrc`
 
 - 3. Build the anoconda virtual environment `python 2.7`
-     [Reference](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/)
+     Reference: [Create virtual environments for python with conda](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/)
      
      Activate the environment by type "source activate [your conda virtual environment name]"
 
