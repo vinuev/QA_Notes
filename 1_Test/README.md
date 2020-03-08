@@ -1,4 +1,4 @@
-`MacOS`,`Anaconda 3`,`Jupyter Nootbook`, `python 2.7`, `hadoop 3.1.2`, `scala 2.12.8`, `apache-spark 2.4.1`, 
+`MacOS`, `Anaconda 3`, `Jupyter Nootbook`, `python 2.7`, `hadoop 3.1.2`, `scala 2.12.8`, `apache-spark 2.4.1`, 
 
 - 1. Install spark, scala hadoop
       ```
@@ -58,7 +58,7 @@
       pip install graphframes
       ```
 - 5. Download corresponding GraphFrame `jar` 
-from [jar](https://dl.bintray.com/spark-packages/maven/graphframes/graphframes/0.7.0-spark2.4-s_2.11/)
+from [Reference](https://dl.bintray.com/spark-packages/maven/graphframes/graphframes/0.7.0-spark2.4-s_2.11/)
 And save it at corresponding spark file. In my computer: "/usr/local/Cellar/apache-spark/2.4.1/libexec/jars"
 
 - 6. type `pyspark` in terminal and start to test using jupyter
