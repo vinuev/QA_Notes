@@ -11,7 +11,7 @@
       
 - 2. enviroment variables
 
-  - 1. Open `.zshrc`
+  - 1. Open `.zshrc` in terminal
 
     `vim ~/.zshrc`
 
@@ -43,7 +43,8 @@
     #python
     #export PATH="/usr/local/anaconda3/bin:$PATH"
     ```
-  - 3. execute `.zshrc`
+  - 3. execute `.zshrc` in terminal
+  
     `source ~/.zshrc`
 
 - 3. Build the anoconda virtual environment `python 2.7`
@@ -69,4 +70,5 @@
      And save it at corresponding spark file. In my computer, the path is `/usr/local/Cellar/apache-spark/2.4.1/libexec/jars`
 
 - 6. Type `pyspark` in terminal and start to test using jupyter
+
 - 7. Finish test and type `source deactivate [your conda virtual environment name]` in terminal
