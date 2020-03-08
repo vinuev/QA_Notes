@@ -49,7 +49,7 @@
 - 3. Build the anoconda virtual environment `python 2.7`
      Reference: [Create virtual environments for python with conda](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/)
      
-     Activate the environment by type "source activate [your conda virtual environment name]"
+     Activate the environment by type `source activate [your conda virtual environment name]`
 
 - 4. Install packages 
       ```
@@ -65,7 +65,7 @@
 - 5. Download corresponding GraphFrame `jar` 
      Download corresponding GraphFrame `jar` from [Reference](https://dl.bintray.com/spark-packages/maven/graphframes/graphframes/0.7.0-spark2.4-s_2.11/)
      
-     And save it at corresponding spark file. In my computer: "/usr/local/Cellar/apache-spark/2.4.1/libexec/jars"
+     And save it at corresponding spark file. In my computer, the path is `/usr/local/Cellar/apache-spark/2.4.1/libexec/jars`
 
-- 6. type `pyspark` in terminal and start to test using jupyter
-- 7. finish test and type "source deactivate [your conda virtual environment name]" in terminal
+- 6. Type `pyspark` in terminal and start to test using jupyter
+- 7. Finish test and type `source deactivate [your conda virtual environment name]` in terminal
