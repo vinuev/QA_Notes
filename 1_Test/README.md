@@ -51,7 +51,7 @@
 
      Reference: [Create virtual environments for python with conda](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/)
      
-     Activate the environment by type `source activate [your conda virtual environment name]`
+     Activate the environment by type `source activate [your conda virtual environment name]` in terminal
 
 - 4. Install packages 
       ```
