@@ -56,7 +56,7 @@
 - 4. Install packages 
       ```
       pip install requests
-      pip install BeautifulSoup`
+      pip install BeautifulSoup
       pip install networkx
       pip install matplotlib
       pip install numpy
