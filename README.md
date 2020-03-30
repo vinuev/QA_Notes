@@ -22,5 +22,6 @@
    - [Steiner tree in graph-explained](https://medium.com/@rkarthik3cse/steiner-tree-in-graph-explained-8eb363786599)
    
   Papers:
-   - 
+   - [Efficient and Progressive Group Steiner Tree Search](https://ronghuali.github.io/paper/sigmod2016gst.pdf)
+
   
