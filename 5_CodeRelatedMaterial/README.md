@@ -5,7 +5,7 @@
 3. `sbatch launcher.Server.sh`
 
 ### 1. Install EasyBuild on HPC (if you have easybuild in HPC, ignore this step)
-Find the steps at [EasyBuild](https://ulhpc-tutorials.readthedocs.io/en/latest/tools/easybuild/)
+Find steps at [EasyBuild](https://ulhpc-tutorials.readthedocs.io/en/latest/tools/easybuild/)
 
 ### 2. Run Install Spark (if you have Spark in HPC, ignore this step)
 	##apply nodes
