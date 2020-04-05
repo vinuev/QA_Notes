@@ -1,6 +1,6 @@
 ## Run process.scala on HPC
 ### 0. Run AIDA Server
-1. Upload AIDA Server file on HPC by `rsync -avzu <source file path> iris-cluster:<destination path>`
+1. Upload AIDA Server file on HPC by using `rsync -avzu <source file path> iris-cluster:<destination path>` in local.
 2. Modify the path to openning the path of AIDA in `launcher.Server.sh`. See the line "cd ..."
 3. `sbatch launcher.Server.sh`
 
