@@ -3,7 +3,7 @@ import java.text.SimpleDateFormat
 import java.util
 import java.util.Calendar
 
-import de.mpii.clausie.{ClausIE, ClausIEApp}
+import de.mpii.clausie.ClausIEApp
 
 //import de.mpii.clausie.ClausIE
 
