@@ -19,7 +19,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/graph/scala_process1/test1.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
+            <state relative-caret-position="4970">
               <caret line="694" lean-forward="true" selection-start-line="694" selection-end-line="694" />
               <folding>
                 <element signature="e#33#66#0" expanded="true" />
@@ -53,7 +53,7 @@
   <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="105" />
     <option name="y" value="23" />
-    <option name="width" value="1274" />
+    <option name="width" value="1475" />
     <option name="height" value="978" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -166,11 +166,11 @@
     <option name="totallyTimeSpent" value="16370000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="105" y="23" width="1274" height="978" extended-state="1" />
+    <frame x="105" y="23" width="1475" height="978" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.70090294" visible="true" weight="0.2556818" />
-      <window_info id="Structure" order="1" sideWeight="0.29909706" side_tool="true" visible="true" weight="0.2556818" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.70090294" visible="true" weight="0.21981856" />
+      <window_info id="Structure" order="1" sideWeight="0.29909706" side_tool="true" visible="true" weight="0.21981856" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -238,7 +238,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/graph/scala_process1/test1.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
+        <state relative-caret-position="4970">
           <caret line="694" lean-forward="true" selection-start-line="694" selection-end-line="694" />
           <folding>
             <element signature="e#33#66#0" expanded="true" />

@@ -36,9 +36,10 @@
     export PYSPARK_DRIVER_PYTHON="jupyter"
     export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
     export PYSPARK_PYTHON=python2
-
+    export SPARK_OPTS="--packages graphframes:graphframes:0.7.0-spark2.4-s_2.11"
+    
     # Launch the jupyter server.
-    pyspark --jars graphframes-0.7.0-spark2.4-s_2.11.jar
+    # pyspark --jars graphframes-0.7.0-spark2.4-s_2.11.jar
 
     #python
     #export PATH="/usr/local/anaconda3/bin:$PATH"
