@@ -89,11 +89,11 @@ edgesText3 = edgesText2.join(verticesText1.select("id","nodeType"), edgesText2.d
 edgesText3 = edgesText3.withColumnRenamed("id", "dst_id").withColumnRenamed("nodeType", "dst_nodeType")
 
 ######### documnet vertice & edges
+### documnets---attributes
 doc_verticesText = verticesText1.filter("nodeType = 'Document'")
-# documnets---attributes
 doc_verticesText = doc_verticesText.withColumn("did", doc_verticesText.id).withColumn("dtitle", doc_verticesText.attr1).drop("attr1").drop("attr2").drop("attr3")
 
-# sentence---attributes
+### sentence---attributes
 # sen_verticesText = verticesText1.filter("nodeType = 'Sentence'")
 sen_edges = edgesText3.filter("label = 'contains the sentence'")
 sen_verticesTextJ_test = verticesText1.filter("nodeType = 'Sentence'")
@@ -108,7 +108,7 @@ sen_verticesText = sen_verticesTextJ_test2.drop("src_id").drop("src_nodeType").d
 sen_verticesText = sen_verticesText.withColumnRenamed("attr1","sid")
 sen_verticesText = sen_verticesText.select("id","nodeType","did","dtitle","sid")
 
-# clause---attributes
+### clause---attributes
 clause_verticesText_test = verticesText1.filter("nodeType = 'Clause'")
 clause_edges = edgesText3.filter("label = 'contains the clause'")
 # combine dst_id
@@ -118,14 +118,26 @@ clause_verticesTextJ_test = clause_verticesTextJ_test.drop("src_nodeType").drop(
 clause_verticesText_test1 = clause_verticesTextJ_test.join(sen_verticesTextJ.select("senid","did","dtitle","sid"), clause_verticesTextJ_test.src_id==sen_verticesTextJ.senid, "inner")
 clause_verticesText_test2 = clause_verticesText_test1.drop("attr2").drop("attr3").drop("src_id").drop("sen_id")
 clause_verticesText = clause_verticesText_test2
+## change clause to predicate
+clause_verticesText1 = clause_verticesText.withColumn("attr1", f.split(clause_verticesText['attr1'], ","))
+predicate_verticesText = clause_verticesText.withColumn("predicate", f.split("attr1", ",")[1])
+predicate_verticesText1 = predicate_verticesText.select("*", f.translate(f.col("predicate"), "[\"()]", "").alias("predicate1"))
+predicate_verticesText2 = predicate_verticesText1.withColumn("nodeType1",f.lit("Predicate"))
+predicate_verticesText = predicate_verticesText2.select("id","nodeType1","did","dtitle","sid","predicate1")
+#add predicate alignment
 
-#delete entity & connect mention
-entity_edges=edgesText3.filter("label = 'is disambiguated as'")
-NewMentionEdges=entity_edges.groupBy("dst_id").agg(f.collect_list('src_id').alias('NewMentionEdges'))
-NewMentionEdges=NewMentionEdges.withColumnRenamed("NewMentionEdges","Mention")
-NewMentionEdges=NewMentionEdges.select("Mention")
-NewMentionEdges=NewMentionEdges.withColumn("Mention1",NewMentionEdges.Mention)
+
+
+### mention---mention edges
+entity_edges = edgesText3.filter("label = 'is disambiguated as'")
+NewMentionEdges = entity_edges.groupBy("dst_id").agg(f.collect_list('src_id').alias('NewMentionEdges'))
+NewMentionEdges = NewMentionEdges.withColumnRenamed("NewMentionEdges","Mention")
+NewMentionEdges = NewMentionEdges.select("Mention")
+NewMentionEdges = NewMentionEdges.withColumn("Mention1",NewMentionEdges.Mention)
 NewMentionEdgesJ = NewMentionEdges.withColumn("Mention1", f.explode("Mention1"))
 
 NewMentionEdgesJ1 = NewMentionEdgesJ.withColumn("Mention", f.explode("Mention"))
 NewMentionEdgesJ2 = NewMentionEdgesJ1.filter(NewMentionEdgesJ1.Mention!=NewMentionEdgesJ1.Mention1)
+
+
+
