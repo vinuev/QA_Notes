@@ -108,6 +108,7 @@ sen_verticesText = sen_verticesTextJ_test2.drop("src_id").drop("src_nodeType").d
 sen_verticesText = sen_verticesText.withColumnRenamed("attr1","sid")
 sen_verticesText = sen_verticesText.select("id","nodeType","did","dtitle","sid")
 
+
 ### clause---attributes
 clause_verticesText_test = verticesText1.filter("nodeType = 'Clause'")
 clause_edges = edgesText3.filter("label = 'contains the clause'")
@@ -124,7 +125,9 @@ predicate_verticesText = clause_verticesText.withColumn("predicate", f.split("at
 predicate_verticesText1 = predicate_verticesText.select("*", f.translate(f.col("predicate"), "[\"()]", "").alias("predicate1"))
 predicate_verticesText2 = predicate_verticesText1.withColumn("nodeType1",f.lit("Predicate"))
 predicate_verticesText = predicate_verticesText2.select("id","nodeType1","did","dtitle","sid","predicate1")
-#add predicate alignment
+#add predicate alignment edge (to do)
+
+
 
 
 
@@ -139,5 +142,11 @@ NewMentionEdgesJ = NewMentionEdges.withColumn("Mention1", f.explode("Mention1"))
 NewMentionEdgesJ1 = NewMentionEdgesJ.withColumn("Mention", f.explode("Mention"))
 NewMentionEdgesJ2 = NewMentionEdgesJ1.filter(NewMentionEdgesJ1.Mention!=NewMentionEdgesJ1.Mention1)
 
+# add mention type by HP (to do)
+# add mention NE_type by NER (to do)
+
+
+# add weight and maxword (to do)
+# generate cornerstone (to do)
 
 
