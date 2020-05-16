@@ -10,7 +10,7 @@
     1. Test GraphFrames by the example in the Book. [Learning Spark](https://github.com/BraveJean/QA_Notes/tree/master/2_Book)
     2. Covert SPO file into GraphFrame. [PySpark SQL Recipes With HiveQL, Dataframe and Graphframes](https://github.com/BraveJean/QA_Notes/tree/master/2_Book)
    
-  - Scala part
+  - Scala part [Reference: Paul Meder's source code]
    
     1. Process Google article 
    
