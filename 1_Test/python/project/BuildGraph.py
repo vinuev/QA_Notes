@@ -142,9 +142,9 @@ NewMentionEdgesJ = NewMentionEdges.withColumn("Mention1", f.explode("Mention1"))
 NewMentionEdgesJ1 = NewMentionEdgesJ.withColumn("Mention", f.explode("Mention"))
 NewMentionEdgesJ2 = NewMentionEdgesJ1.filter(NewMentionEdgesJ1.Mention!=NewMentionEdgesJ1.Mention1)
 
-# add mention type by HP (to do)
+# add type by HP (couldn't find it use sentence, drop this type temporarily)
 # add mention NE_type by NER (to do)
-
+# mention alignment
 
 # add weight and maxword (to do)
 # generate cornerstone (to do)
