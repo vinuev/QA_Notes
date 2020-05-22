@@ -9,7 +9,7 @@ import pyspark.sql.functions as f
 from pyspark.sql.functions import lit
 
 # library 
-sys.path.append("project/library")
+sys.path.append("/Users/jeanxu/Documents/UniLU/0_MasterThesis/5_Notes/QA_Notes/1_Test/python/project/library")
 import get_answer_types_from_questions as gtQType
 import get_all_subjects_predicates_from_questions as gtQSub
 from stanfordcorenlp import StanfordCoreNLP
@@ -116,6 +116,9 @@ clause_edges = edgesText3.filter("label = 'contains the clause'")
 clause_verticesTextJ_test = clause_verticesText_test.join(clause_edges.select("src_id","src_nodeType","dst_id","dst_nodeType"), clause_verticesText_test.id==clause_edges.dst_id, "inner")
 clause_verticesTextJ_test = clause_verticesTextJ_test.drop("src_nodeType").drop("dst_id").drop("dst_nodeType")
 # combine src_id
+
+sen_verticesTextJ=sen_verticesText.withColumnRenamed("id","senid")##important, need to keep different column name with others when "JOIN"
+
 clause_verticesText_test1 = clause_verticesTextJ_test.join(sen_verticesTextJ.select("senid","did","dtitle","sid"), clause_verticesTextJ_test.src_id==sen_verticesTextJ.senid, "inner")
 clause_verticesText_test2 = clause_verticesText_test1.drop("attr2").drop("attr3").drop("src_id").drop("sen_id")
 clause_verticesText = clause_verticesText_test2
@@ -144,7 +147,7 @@ NewMentionEdgesJ2 = NewMentionEdgesJ1.filter(NewMentionEdgesJ1.Mention!=NewMenti
 
 # add type by HP (couldn't find it use sentence, drop this type temporarily)
 # add mention NE_type by NER (to do)
-# mention alignment
+# mention alignment(to do)
 
 # add weight and maxword (to do)
 # generate cornerstone (to do)
