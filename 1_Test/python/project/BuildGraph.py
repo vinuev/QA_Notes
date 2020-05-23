@@ -13,6 +13,7 @@ sys.path.append("/Users/jeanxu/Documents/UniLU/0_MasterThesis/5_Notes/QA_Notes/1
 import get_answer_types_from_questions as gtQType
 import get_all_subjects_predicates_from_questions as gtQSub
 from stanfordcorenlp import StanfordCoreNLP
+import hearstPatterns as hP
 
 # config
 verbose = 0

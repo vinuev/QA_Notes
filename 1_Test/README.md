@@ -73,3 +73,5 @@
 - 6. Type `pyspark` in terminal and start to test using jupyter
 
 - 7. Finish test and type `source deactivate [your conda virtual environment name]` in terminal
+
+- 8. Relace corenlp.py in "/usr/local/anaconda3/envs/QUES_Test/lib/python2.7/site-packages/stanfordcorenlp/"

@@ -176,8 +176,9 @@ class HearstPatterns(object):
 
                     for i in range(len(specifics)):
                         #print("%s, %s" % (specifics[i], general))
-                        hyponyms.append((self.clean_hyponym_term(specifics[i]), self.clean_hyponym_term(general)))
-
+                        # hyponyms.append((self.clean_hyponym_term(specifics[i]), self.clean_hyponym_term(general)))
+                        hyponyms = self.clean_hyponym_term(general)
+                        # return hyponyms
         return hyponyms
 
 
