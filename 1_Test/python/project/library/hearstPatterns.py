@@ -176,11 +176,16 @@ class HearstPatterns(object):
 
                     for i in range(len(specifics)):
                         #print("%s, %s" % (specifics[i], general))
-                        # hyponyms.append((self.clean_hyponym_term(specifics[i]), self.clean_hyponym_term(general)))
-                        hyponyms = self.clean_hyponym_term(general)
+                        hs = self.clean_hyponym_term(specifics[i])+"-"+self.clean_hyponym_term(general)
+                        hyponyms.append(hs)
+                        # hyponyms.append((self.clean_hyponym_term(general),self.clean_hyponym_term(general)))
                         # return hyponyms
         return hyponyms
 
+    # from pyspark.sql.functions import udf
+    # from pyspark.sql.types import ArrayType, StringType
+
+    # find_hyponyms_udf = udf(lambda x: find_hyponyms(x), ArrayType(StringType()))
 
     def clean_hyponym_term(self, term):
         # good point to do the stemming or lemmatization
